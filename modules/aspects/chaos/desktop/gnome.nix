@@ -42,6 +42,10 @@
       # Enable fractional scaling
       services.displayManager.gdm.wayland = true;
       environment.sessionVariables.NIXOS_OZONE_WL = "1";
+      services.desktopManager.gnome.extraGSettingsOverrides = ''
+        [org.gnome.mutter]
+        experimental-features=['scale-monitor-framebuffer', 'xwayland-native-scaling']
+      '';
 
       environment.systemPackages =
         with pkgs;
