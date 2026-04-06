@@ -14,24 +14,26 @@ let
   };
 in
 {
-  den.hosts.x86_64-linux.tars.users = users;
-  den.hosts.x86_64-linux.case.users = users;
+  den.hosts.x86_64-linux.tars = {
+    mainDisk = "/dev/nvme0n1";
+    disko.swapSize = "72G";
+    users = users;
+  };
+  den.hosts.x86_64-linux.case = {
+    mainDisk = "/dev/nvme0n1";
+    disko.swapSize = "32G";
+    users = users;
+  };
 
   den.aspects.tars.includes = [
-    (<chaos/system/disko> {
-      device = "/dev/nvme0n1";
-      swapSize = "72G";
-    })
+    <chaos/system/disko>
     <chaos/hardware/workstation>
     <chaos/system/keymap/colemak>
     <chaos/desktop/gnome>
   ];
 
   den.aspects.case.includes = [
-    (<chaos/system/disko> {
-      device = "/dev/nvme0n1";
-      swapSize = "32G";
-    })
+    <chaos/system/disko>
     <chaos/hardware/framework-13-amd-ai-300>
     <chaos/system/keymap/en-us-intl>
     <chaos/desktop/gnome>

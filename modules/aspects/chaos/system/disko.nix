@@ -1,8 +1,58 @@
 {
   inputs,
+  lib,
   ...
 }:
 {
+  den.schema.host = {
+    options = {
+      mainDisk = lib.mkOption {
+        type = lib.types.str;
+        description = "The disk to install to, e.g. /dev/sda";
+      };
+
+      disko.bootPartitionSize = lib.mkOption {
+        type = lib.types.str;
+        default = "1G";
+        description = "Size of the EFI boot partition.";
+      };
+
+      disko.luksPartitionSize = lib.mkOption {
+        type = lib.types.str;
+        default = "100%";
+        description = "Size of the LUKS partition.";
+      };
+
+      disko.swapSize = lib.mkOption {
+        type = lib.types.str;
+        default = "8G";
+        description = "Size of the swap LVM logical volume.";
+      };
+
+      disko.bootMountOptions = lib.mkOption {
+        type = lib.types.listOf lib.types.str;
+        default = [
+          "defaults"
+          "fmask=0022"
+          "dmask=0022"
+        ];
+        description = "Mount options for the boot (vfat) partition.";
+      };
+
+      disko.btrfsMountOptions = lib.mkOption {
+        type = lib.types.listOf lib.types.str;
+        default = [
+          "defaults"
+          "noatime"
+          "ssd"
+          "discard=async"
+          "compress=zstd"
+        ];
+        description = "Mount options for btrfs subvolumes.";
+      };
+    };
+  };
+
   flake-file.inputs = {
     disko = {
       url = "github:nix-community/disko";
@@ -11,26 +61,7 @@
   };
 
   chaos.system.provides.disko =
-    {
-      device,
-
-      bootPartitionSize ? "1G",
-      luksPartitionSize ? "100%",
-      swapSize ? "8G",
-
-      bootMountOptions ? [
-        "defaults"
-        "fmask=0022"
-        "dmask=0022"
-      ],
-      btrfsMountOptions ? [
-        "defaults"
-        "noatime"
-        "ssd"
-        "discard=async"
-        "compress=zstd"
-      ],
-    }:
+    { host, ... }:
     {
       nixos = {
         imports = [
@@ -41,12 +72,12 @@
           disk = {
             main = {
               type = "disk";
-              device = device;
+              device = host.mainDisk;
               content = {
                 type = "gpt";
                 partitions = {
                   part_00_ESP = {
-                    size = bootPartitionSize;
+                    size = host.disko.bootPartitionSize;
                     type = "EF00";
                     label = "ESP";
                     name = "ESP";
@@ -55,12 +86,12 @@
                       type = "filesystem";
                       format = "vfat";
                       mountpoint = "/boot";
-                      mountOptions = bootMountOptions;
+                      mountOptions = host.disko.bootMountOptions;
                     };
                   };
                   part_01_luks = {
                     name = "system_luks";
-                    size = luksPartitionSize;
+                    size = host.disko.luksPartitionSize;
                     label = "system_luks";
                     content = {
                       type = "luks";
@@ -85,7 +116,7 @@
               type = "lvm_vg";
               lvs = {
                 swap = {
-                  size = swapSize;
+                  size = host.disko.swapSize;
                   content = {
                     type = "swap";
                     discardPolicy = "both";
@@ -99,19 +130,19 @@
                     subvolumes = {
                       "@" = {
                         mountpoint = "/";
-                        mountOptions = btrfsMountOptions;
+                        mountOptions = host.disko.btrfsMountOptions;
                       };
                       "@nix" = {
                         mountpoint = "/nix";
-                        mountOptions = btrfsMountOptions;
+                        mountOptions = host.disko.btrfsMountOptions;
                       };
                       "@home" = {
                         mountpoint = "/home";
-                        mountOptions = btrfsMountOptions;
+                        mountOptions = host.disko.btrfsMountOptions;
                       };
                       "@persistent" = {
                         mountpoint = "/persistent";
-                        mountOptions = btrfsMountOptions;
+                        mountOptions = host.disko.btrfsMountOptions;
                       };
                     };
                   };
