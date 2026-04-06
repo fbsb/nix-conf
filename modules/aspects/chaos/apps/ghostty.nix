@@ -22,6 +22,7 @@
             "alt+right=goto_split:right"
             "alt+down=goto_split:down"
           ];
+          theme = "light:GitHub Light Default,dark:GitHub Dark Default";
         };
       };
     };
