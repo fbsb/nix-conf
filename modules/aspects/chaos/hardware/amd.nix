@@ -1,52 +1,51 @@
 {
-  __findFile ? __findFile,
+  chaos,
   inputs,
   ...
 }:
 {
-  chaos.hardware.provides.amd = {
+  chaos.hardware._.amd = {
     includes = [
-      <chaos/hardware/firmware>
-      <chaos/hardware/amd/cpu>
-      <chaos/hardware/amd/gpu>
+      chaos.hardware._.firmware
+      chaos.hardware._.amd._.cpu
+      chaos.hardware._.amd._.gpu
     ];
+  };
 
-    provides.cpu = {
-      includes = [
+  chaos.hardware._.amd._.cpu = {
+    nixos = {
+      imports = [
+        inputs.nixos-hardware.nixosModules.common-cpu-amd
+        inputs.nixos-hardware.nixosModules.common-cpu-amd-pstate
+        inputs.nixos-hardware.nixosModules.common-cpu-amd-zenpower
       ];
-      nixos = {
-        imports = [
-          inputs.nixos-hardware.nixosModules.common-cpu-amd
-          inputs.nixos-hardware.nixosModules.common-cpu-amd-pstate
-          inputs.nixos-hardware.nixosModules.common-cpu-amd-zenpower
-        ];
-        # TODO check if microcode-amd is still broken
-        # hardware.firmware = with pkgs; [
-        #   microcode-amd
-        # ];
-      };
-    };
-
-    provides.gpu = {
-      includes = [
-        inputs.nixos-hardware.nixosModules.common-gpu-amd
-      ];
-      nixos =
-        {
-          pkgs,
-          ...
-        }:
-        {
-          environment.systemPackages = with pkgs; [
-            amdgpu_top
-            nvtopPackages.amd
-          ];
-
-          hardware.amdgpu = {
-            opencl.enable = true;
-            initrd.enable = true;
-          };
-        };
+      # TODO check if microcode-amd is still broken
+      # hardware.firmware = with pkgs; [
+      #   microcode-amd
+      # ];
     };
   };
+
+  chaos.hardware._.amd._.gpu = {
+    nixos =
+      {
+        pkgs,
+        ...
+      }:
+      {
+        imports = [
+          inputs.nixos-hardware.nixosModules.common-gpu-amd
+        ];
+        environment.systemPackages = with pkgs; [
+          amdgpu_top
+          nvtopPackages.amd
+        ];
+
+        hardware.amdgpu = {
+          opencl.enable = true;
+          initrd.enable = true;
+        };
+      };
+  };
+
 }

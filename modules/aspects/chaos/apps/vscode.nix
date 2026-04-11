@@ -1,10 +1,11 @@
 {
-  __findFile ? __findFile,
-  lib,
+  chaos,
   ...
 }:
 {
-  chaos.apps.provides.vscode = {
+  chaos.all._.users.includes = [ chaos.apps._.vscode ];
+
+  chaos.apps._.vscode = {
     homeManager =
       {
         pkgs,
@@ -35,8 +36,4 @@
         # };
       };
   };
-
-  chaos.apps.provides.all.includes = [
-    <chaos/apps/vscode>
-  ];
 }

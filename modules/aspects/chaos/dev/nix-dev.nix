@@ -1,5 +1,8 @@
+{ chaos, ... }:
 {
-  chaos.dev.provides.nix-dev = {
+  chaos.all._.users.includes = [ chaos.dev._.nix-dev ];
+
+  chaos.dev._.nix-dev = {
     homeManager =
       {
         pkgs,

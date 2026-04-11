@@ -1,9 +1,5 @@
 {
-  __findFile ? __findFile,
-  ...
-}:
-{
-  chaos.desktop.provides.cosmic = {
+  chaos.desktop._.cosmic = {
     nixos =
       {
         pkgs,

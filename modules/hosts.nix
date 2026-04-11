@@ -1,6 +1,6 @@
 {
   den,
-  __findFile ? __findFile,
+  chaos,
   ...
 }:
 let
@@ -26,30 +26,21 @@ in
   };
 
   den.aspects.tars.includes = [
-    <chaos/system/disko>
-    <chaos/hardware/workstation>
-    <chaos/system/keymap/colemak>
-    <chaos/desktop/gnome>
+    chaos.all._.hosts
+    chaos.hardware._.workstation
+    chaos.system._.keymap._.colemak
+    chaos.desktop._.gnome
   ];
 
   den.aspects.case.includes = [
-    <chaos/system/disko>
-    <chaos/hardware/framework-13-amd-ai-300>
-    <chaos/system/keymap/en-us-intl>
-    <chaos/desktop/gnome>
+    chaos.all._.hosts
+    chaos.hardware._.framework-13-amd-ai-300
+    chaos.system._.keymap._.en-us-intl
+    chaos.desktop._.gnome
   ];
 
   den.aspects.fbsb.includes = [
-    <chaos/common>
-    <den/primary-user>
-    <chaos/shell/zsh>
-    <chaos/apps/all>
-    <chaos/virtualisation/vmware>
-  ];
-
-  den.default.includes = [
-    <chaos/build-vm>
-    <my/state-version>
-    <chaos/system/unfree>
+    chaos.all._.users
+    den._.primary-user
   ];
 }

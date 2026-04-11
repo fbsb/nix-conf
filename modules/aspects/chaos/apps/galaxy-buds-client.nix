@@ -1,9 +1,11 @@
 {
-  __findFile ? __findFile,
+  chaos,
   ...
 }:
 {
-  chaos.apps.provides.galaxy-buds-client = {
+  chaos.all._.hosts.includes = [ chaos.apps._.galaxy-buds-client ];
+
+  chaos.apps._.galaxy-buds-client = {
     nixos =
       {
         pkgs,
@@ -19,8 +21,4 @@
         ];
       };
   };
-
-  chaos.apps.provides.all.includes = [
-    <chaos/apps/galaxy-buds-client>
-  ];
 }

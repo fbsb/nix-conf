@@ -1,5 +1,8 @@
+{ chaos, ... }:
 {
-  chaos.system.provides.pipewire = {
+  chaos.all._.hosts.includes = [ chaos.system._.pipewire ];
+
+  chaos.system._.pipewire = {
     nixos = {
       security.rtkit.enable = true;
       services.pipewire = {

@@ -1,8 +1,4 @@
-{
-  __findFile ? __findFile,
-  lib,
-  ...
-}:
+{ lib, ... }:
 {
   chaos.hardware._.nvidia = {
     nixos =

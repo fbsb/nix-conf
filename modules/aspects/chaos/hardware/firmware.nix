@@ -1,5 +1,5 @@
 {
-  chaos.hardware.provides.firmware = {
+  chaos.hardware._.firmware = {
     nixos =
       {
         pkgs,

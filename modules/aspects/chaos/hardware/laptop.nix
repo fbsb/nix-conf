@@ -1,12 +1,12 @@
 {
-  __findFile ? __findFile,
+  chaos,
   ...
 }:
 {
-  chaos.hardware.provides.laptop = {
+  chaos.hardware._.laptop = {
     includes = [
-      <chaos/system/power>
-      <chaos/hardware/bluetooth>
+      chaos.system._.power
+      chaos.hardware._.bluetooth
     ];
     nixos = {
       services.logind.settings.Login = {

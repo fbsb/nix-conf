@@ -1,9 +1,11 @@
 {
-  __findFile ? __findFile,
+  chaos,
   ...
 }:
 {
-  chaos.apps.provides.zen-browser = {
+  chaos.all._.hosts.includes = [ chaos.apps._.zen-browser ];
+
+  chaos.apps._.zen-browser = {
     nixos = {
       services.flatpak = {
         packages = [
@@ -14,8 +16,4 @@
       # TODO: add config, extensions, etc.
     };
   };
-
-  chaos.apps.provides.all.includes = [
-    <chaos/apps/zen-browser>
-  ];
 }

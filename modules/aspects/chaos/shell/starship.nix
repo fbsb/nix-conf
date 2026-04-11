@@ -1,5 +1,8 @@
+{ chaos, ... }:
 {
-  chaos.shell.provides.starship = {
+  chaos.all._.users.includes = [ chaos.shell._.starship ];
+
+  chaos.shell._.starship = {
     # TODO: move to separate aspect
     nixos =
       {

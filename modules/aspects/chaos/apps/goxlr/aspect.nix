@@ -1,9 +1,11 @@
 {
-  __findFile ? __findFile,
+  chaos,
   ...
 }:
 {
-  chaos.apps.provides.goxlr = {
+  chaos.all._.users.includes = [ chaos.apps._.goxlr ];
+
+  chaos.apps._.goxlr = {
     nixos = {
       services.goxlr-utility = {
         enable = true;
@@ -37,8 +39,4 @@
         };
       };
   };
-
-  chaos.apps.provides.all.includes = [
-    <chaos/apps/goxlr>
-  ];
 }

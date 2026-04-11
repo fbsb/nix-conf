@@ -1,9 +1,12 @@
 {
+  chaos,
   lib,
   ...
 }:
 {
-  chaos.system.provides.utils = {
+  chaos.all._.hosts.includes = [ chaos.system._.utils ];
+
+  chaos.system._.utils = {
     nixos =
       { pkgs, ... }:
       {

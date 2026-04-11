@@ -1,5 +1,8 @@
+{ chaos, ... }:
 {
-  chaos.system.provides.network = {
+  chaos.all._.hosts.includes = [ chaos.system._.network ];
+
+  chaos.system._.network = {
     nixos = {
       networking = {
         networkmanager.enable = true;

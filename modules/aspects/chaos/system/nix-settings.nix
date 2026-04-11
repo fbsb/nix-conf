@@ -1,4 +1,5 @@
 {
+  chaos,
   lib,
   ...
 }:
@@ -15,7 +16,9 @@ in
     extra-trusted-public-keys = caches.trusted-public-keys;
   };
 
-  chaos.system.provides.nix-settings = {
+  chaos.all._.hosts.includes = [ chaos.system._.nix-settings ];
+
+  chaos.system._.nix-settings = {
     nixos.nix = {
       channel.enable = lib.mkForce false;
 

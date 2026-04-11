@@ -1,4 +1,5 @@
 {
+  chaos,
   inputs,
   lib,
   ...
@@ -60,7 +61,9 @@
     };
   };
 
-  chaos.system.provides.disko =
+  chaos.all._.hosts.includes = [ chaos.system._.disko ];
+
+  chaos.system._.disko =
     { host, ... }:
     {
       nixos = {

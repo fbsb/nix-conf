@@ -1,8 +1,12 @@
 {
+  chaos,
   lib,
   ...
 }:
 {
+
+  chaos.all._.users.includes = [ chaos.build-vm ];
+
   chaos.build-vm =
     { user, ... }:
     {
@@ -18,7 +22,7 @@
                 guestAgent.enable = true;
                 options = [
                   "-device virtio-vga-gl"
-                  "-display gtk,gl=on,grab-on-hover=off,show-cursor=on,zoom-to-fit=on"
+                  "-display gtk,gl=on,grab-on-hover=on,show-cursor=on,zoom-to-fit=on"
                 ];
               };
               fileSystems."/".autoResize = true;
@@ -35,7 +39,12 @@
           };
         in
         {
-          virtualisation.vmVariant = vmConfig;
+          virtualisation.vmVariant = vmConfig // {
+            services.displayManager.autoLogin = {
+              enable = true;
+              user = user.name;
+            };
+          };
           virtualisation.vmVariantWithBootLoader = vmConfig;
         };
     };

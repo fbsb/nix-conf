@@ -3,7 +3,7 @@
   ...
 }:
 {
-  chaos.hardware.provides.fingerprint = {
+  chaos.hardware._.fingerprint = {
     nixos =
       {
         pkgs,

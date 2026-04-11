@@ -1,5 +1,5 @@
 {
-  chaos.hardware.provides.sensors = {
+  chaos.hardware._.sensors = {
     nixos =
       { pkgs, ... }:
       {

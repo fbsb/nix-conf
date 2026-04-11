@@ -1,5 +1,8 @@
+{ chaos, ... }:
 {
-  chaos.cli.provides.nix-utils = {
+  chaos.all._.users.includes = [ chaos.cli._.nix-utils ];
+
+  chaos.cli._.nix-utils = {
     homeManager =
       {
         pkgs,

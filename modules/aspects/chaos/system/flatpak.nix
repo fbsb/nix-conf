@@ -1,4 +1,5 @@
 {
+  chaos,
   inputs,
   ...
 }:
@@ -9,7 +10,9 @@
     };
   };
 
-  chaos.system.provides.flatpak = {
+  chaos.all._.hosts.includes = [ chaos.system._.flatpak ];
+
+  chaos.system._.flatpak = {
     nixos = {
       imports = [
         inputs.nix-flatpak.nixosModules.nix-flatpak

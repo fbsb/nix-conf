@@ -1,15 +1,11 @@
+{ chaos, ... }:
 {
-  __findFile ? __findFile,
-  inputs,
-  ...
-}:
-{
-  chaos.hardware.provides.workstation = {
+  chaos.hardware._.workstation = {
     includes = [
-      <chaos/hardware/firmware>
-      <chaos/hardware/amd/cpu>
-      <chaos/hardware/nvidia>
-      <chaos/hardware/sensors>
+      chaos.hardware._.firmware
+      chaos.hardware._.amd._.cpu
+      chaos.hardware._.nvidia
+      chaos.hardware._.sensors
     ];
   };
 }

@@ -1,5 +1,5 @@
 {
-  chaos.hardware.provides.bluetooth = {
+  chaos.hardware._.bluetooth = {
     nixos = {
       services.blueman.enable = true;
 

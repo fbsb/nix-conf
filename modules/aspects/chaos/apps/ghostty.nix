@@ -1,9 +1,11 @@
 {
-  __findFile ? __findFile,
+  chaos,
   ...
 }:
 {
-  chaos.apps.provides.ghostty = {
+  chaos.all._.users.includes = [ chaos.apps._.ghostty ];
+
+  chaos.apps._.ghostty = {
     homeManager = {
       programs.ghostty = {
         enable = true;
@@ -27,8 +29,4 @@
       };
     };
   };
-
-  chaos.apps.provides.all.includes = [
-    <chaos/apps/ghostty>
-  ];
 }

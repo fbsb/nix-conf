@@ -1,14 +1,19 @@
 {
-  __findFile ? __findFile,
+  chaos,
   den,
   ...
 }:
 {
-  chaos.shell.provides.zsh = den.lib.parametric {
-    includes = [
-      (<den/user-shell> "zsh")
-    ];
+  chaos.all._.users.includes = [ chaos.shell._.zsh._.default ];
 
+  chaos.shell._.zsh._.default = {
+    includes = [
+      (den._.user-shell "zsh")
+      chaos.shell._.zsh
+    ];
+  };
+
+  chaos.shell._.zsh = {
     homeManager =
       {
         config,

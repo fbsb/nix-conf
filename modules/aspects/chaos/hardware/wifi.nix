@@ -1,10 +1,6 @@
+{ lib, ... }:
 {
-  __findFile ? __findFile,
-  lib,
-  ...
-}:
-{
-  chaos.hardware.provides.wifi = {
+  chaos.hardware._.wifi = {
     nixos = {
       hardware.enableAllFirmware = lib.mkDefault true;
 

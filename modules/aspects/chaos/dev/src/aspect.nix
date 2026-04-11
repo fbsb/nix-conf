@@ -1,6 +1,6 @@
 {
+  chaos,
   den,
-  pkgs,
   ...
 }:
 let
@@ -16,7 +16,9 @@ in
       packages.src = mkSrc pkgs;
     };
 
-  chaos.dev.provides.src = {
+  chaos.all._.users.includes = [ chaos.dev._.src ];
+
+  chaos.dev._.src = {
     homeManager =
       {
         pkgs,

@@ -1,17 +1,17 @@
 {
-  __findFile ? __findFile,
+  chaos,
   inputs,
   ...
 }:
 {
-  chaos.hardware.provides.framework-13-amd-ai-300 = {
+  chaos.hardware._.framework-13-amd-ai-300 = {
     includes = [
-      <chaos/hardware/laptop>
-      <chaos/hardware/amd>
-      <chaos/hardware/fingerprint>
-      <chaos/hardware/sensors>
-      <chaos/hardware/wifi>
-      <chaos/hardware/framework/wifi-quirks>
+      chaos.hardware._.laptop
+      chaos.hardware._.amd
+      chaos.hardware._.fingerprint
+      chaos.hardware._.sensors
+      chaos.hardware._.wifi
+      chaos.hardware._.framework._.wifi-quirks
     ];
     nixos = {
       imports = [
@@ -20,7 +20,7 @@
     };
   };
 
-  chaos.hardware.provides.framework.provides.wifi-quirks = {
+  chaos.hardware._.framework._.wifi-quirks = {
     nixos = {
       networking = {
         networkmanager.wifi = {

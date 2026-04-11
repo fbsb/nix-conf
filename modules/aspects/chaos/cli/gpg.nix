@@ -1,5 +1,8 @@
+{ chaos, ... }:
 {
-  chaos.cli.provides.gpg = {
+  chaos.all._.users.includes = [ chaos.cli._.gpg ];
+
+  chaos.cli._.gpg = {
     homeManager =
       {
         pkgs,

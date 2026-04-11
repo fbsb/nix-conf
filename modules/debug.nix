@@ -1,0 +1,4 @@
+{ den, ... }:
+{
+  flake.den = den;
+}

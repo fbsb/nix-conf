@@ -1,9 +1,11 @@
 {
-  __findFile ? __findFile,
+  chaos,
   ...
 }:
 {
-  chaos.apps.provides.junction = {
+  chaos.all._.hosts.includes = [ chaos.apps._.junction ];
+
+  chaos.apps._.junction = {
     nixos =
       let
         junctionApp = "re.sonny.Junction";
@@ -31,8 +33,4 @@
         };
       };
   };
-
-  chaos.apps.provides.all.includes = [
-    <chaos/apps/junction>
-  ];
 }
