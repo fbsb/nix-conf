@@ -40,6 +40,9 @@
         in
         {
           virtualisation.vmVariant = vmConfig // {
+            swapDevices = lib.mkForce [ ];
+            boot.resumeDevice = lib.mkForce "";
+
             services.displayManager.autoLogin = {
               enable = true;
               user = user.name;
