@@ -2,16 +2,16 @@
   "nodes": {
     "den": {
       "locked": {
-        "lastModified": 1774839646,
-        "narHash": "sha256-IFz5Q+bT4HUxIb2aoLGZpPlrIaW5ClRrUIjAfb7JF3w=",
+        "lastModified": 1775551420,
+        "narHash": "sha256-8ICGLVOpuXc8b1YirfsAQcPEW5sV4bpGHHDny8Pww0I=",
         "owner": "vic",
         "repo": "den",
-        "rev": "e72f7b4691a1b53e9e654f2127a93c8b42d34976",
+        "rev": "8101ec865c0bf4027d40b9fd8951e3e435a86d64",
         "type": "github"
       },
       "original": {
         "owner": "vic",
-        "ref": "v0.14.0",
+        "ref": "v0.15.0",
         "repo": "den",
         "type": "github"
       }
@@ -54,7 +54,7 @@
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
-          "nixpkgs-lib"
+          "nixpkgs"
         ]
       },
       "locked": {
@@ -161,10 +161,7 @@
         "import-tree": "import-tree",
         "nix-flatpak": "nix-flatpak",
         "nixos-hardware": "nixos-hardware",
-        "nixpkgs": "nixpkgs",
-        "nixpkgs-lib": [
-          "nixpkgs"
-        ]
+        "nixpkgs": "nixpkgs"
       }
     }
   },
