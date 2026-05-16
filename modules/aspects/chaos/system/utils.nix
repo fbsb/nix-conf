@@ -30,7 +30,6 @@
           sops
           ssh-to-age
           tree
-          treecat
           util-linux
           yq-go
           psmisc
