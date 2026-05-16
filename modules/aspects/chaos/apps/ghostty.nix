@@ -25,6 +25,8 @@
             "alt+down=goto_split:down"
           ];
           theme = "light:GitHub Light Default,dark:GitHub Dark Default";
+          tab-inherit-working-directory = false;
+          window-inherit-working-directory = false;
         };
       };
     };
