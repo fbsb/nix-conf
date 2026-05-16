@@ -27,6 +27,9 @@
         enableBashIntegration = true;
         settings = {
           add_newline = true;
+          git_status = {
+            stashed = "";
+          };
         };
       };
     };
