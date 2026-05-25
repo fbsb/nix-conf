@@ -24,6 +24,9 @@
             push = {
               default = "current";
             };
+            init = {
+              defaultBranch = "main";
+            };
             gc = {
               auto = 0;
               reflogExpire = "never";
