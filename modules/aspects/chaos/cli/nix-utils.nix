@@ -16,6 +16,8 @@
 
         home.packages = with pkgs; [
           comma
+          nh
+          nvd
         ];
       };
   };
