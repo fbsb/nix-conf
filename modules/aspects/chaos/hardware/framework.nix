@@ -12,6 +12,7 @@
       chaos.hardware._.sensors
       chaos.hardware._.wifi
       chaos.hardware._.framework._.wifi-quirks
+      chaos.hardware._.fan-control
     ];
     nixos = {
       imports = [

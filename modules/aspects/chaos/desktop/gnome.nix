@@ -16,6 +16,8 @@
         clipboard-indicator
         dash-to-dock
         tiling-shell
+        # TODO: allow aspects to contribute extensions and move this to hardware/fan-control.nix
+        framework-fan-control
       ];
     in
     {
