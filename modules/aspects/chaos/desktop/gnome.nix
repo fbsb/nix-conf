@@ -1,24 +1,27 @@
 { chaos, ... }:
 {
 
+  den.quirks.gnome-extensions.description = "GNOME shell extensions contributed by aspects";
+
   # TODO: remove when all systems have migrated to new aspect
   chaos.gnome.includes = [ chaos.desktop._.gnome ];
 
   chaos.desktop._.gnome.nixos =
     {
       pkgs,
+      gnome-extensions,
       ...
     }:
     let
-      extensions = with pkgs.gnomeExtensions; [
+      builtinExtensions = with pkgs.gnomeExtensions; [
         appindicator
         blur-my-shell
         clipboard-indicator
         dash-to-dock
         tiling-shell
-        # TODO: allow aspects to contribute extensions and move this to hardware/fan-control.nix
-        framework-fan-control
       ];
+      contributedExtensions = map (name: pkgs.gnomeExtensions.${name}) gnome-extensions;
+      allExtensions = builtinExtensions ++ contributedExtensions;
     in
     {
       services.displayManager.gdm.enable = true;
@@ -53,7 +56,7 @@
           dconf-editor
           gnome-tweaks
         ]
-        ++ extensions;
+        ++ allExtensions;
 
       programs.dconf.enable = true;
       programs.dconf.profiles = {
@@ -71,7 +74,7 @@
                 button-layout = "appmenu:minimize,maximize,close";
               };
               "org/gnome/shell" = {
-                enabled-extensions = map (extension: extension.extensionUuid) extensions;
+                enabled-extensions = map (extension: extension.extensionUuid) allExtensions;
               };
               "org/gnome/mutter" = {
                 edge-tiling = false;

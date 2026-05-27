@@ -1,6 +1,8 @@
 { inputs, ... }:
 {
   chaos.hardware._.fan-control = {
+    gnome-extensions = [ "framework-fan-control" ];
+
     nixos = {
       hardware = {
         fw-fanctrl = {
