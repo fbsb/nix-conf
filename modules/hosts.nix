@@ -10,6 +10,10 @@ let
       gitEmail = "git@fbsb.dev";
       # nix run nixpkgs#mkpasswd -- -m scrypt
       passwordHash = "$7$CU..../....YeOtHgY4msMgJPCPkb4Qw/$/5T9x1RVcartjx0TjeHBwmdLwMVQuHcDHU46LUbtAq8";
+      sshAuthorizedKeys = [ ];
+      gpgKeys = [
+        ./gpg_keys/fbsb.asc
+      ];
     };
   };
 in
