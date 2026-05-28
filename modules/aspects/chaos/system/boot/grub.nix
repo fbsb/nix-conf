@@ -15,6 +15,8 @@
         enable = true;
         device = "nodev";
         efiSupport = true;
+        gfxmodeEfi = "1920x1080";
+        gfxpayloadEfi = "keep";
         useOSProber = true;
         enableCryptodisk = true;
         default = "saved";
