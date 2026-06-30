@@ -11,9 +11,9 @@
         AllowHybridSleep = true;
         AllowSuspendThenHibernate = true;
       };
-    };
-    services.logind.settings.Login = {
-      HandlePowerKey = "hibernate";
+      services.logind.settings.Login = {
+        HandlePowerKey = "hibernate";
+      };
     };
   };
 }

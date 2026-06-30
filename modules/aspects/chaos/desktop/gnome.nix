@@ -80,6 +80,15 @@
                 edge-tiling = false;
                 dynamic-workspaces = true;
               };
+              # Delegate idle and power-button handling to systemd-logind
+              # (IdleAction=suspend-then-hibernate, HandlePowerKey=hibernate).
+              # Setting these to "nothing" makes gsd-power drop its inhibitors
+              # so logind actually gets to act on the events.
+              "org/gnome/settings-daemon/plugins/power" = {
+                sleep-inactive-ac-type = "nothing";
+                sleep-inactive-battery-type = "nothing";
+                power-button-action = "nothing";
+              };
             };
           }
         ];

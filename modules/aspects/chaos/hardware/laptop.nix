@@ -11,6 +11,8 @@
     nixos = {
       services.logind.settings.Login = {
         HandleLidSwitch = "suspend-then-hibernate";
+        IdleAction = "suspend-then-hibernate";
+        IdleActionSec = "15min";
       };
 
       systemd.sleep.settings.Sleep = {
