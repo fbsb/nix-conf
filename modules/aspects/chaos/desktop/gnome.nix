@@ -19,6 +19,7 @@
         clipboard-indicator
         dash-to-dock
         tiling-shell
+        system-monitor-next
       ];
       contributedExtensions = map (name: pkgs.gnomeExtensions.${name}) gnome-extensions;
       allExtensions = builtinExtensions ++ contributedExtensions;
@@ -54,6 +55,7 @@
           # utilities
           adwaita-icon-theme
           dconf-editor
+          dconf2nix
           gnome-tweaks
         ]
         ++ allExtensions;
