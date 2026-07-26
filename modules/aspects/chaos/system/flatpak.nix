@@ -13,10 +13,17 @@
   chaos.all._.hosts.includes = [ chaos.system._.flatpak ];
 
   chaos.system._.flatpak = {
-    nixos = {
+    nixos = { pkgs, ... }: {
       imports = [
         inputs.nix-flatpak.nixosModules.nix-flatpak
       ];
+
+      xdg.portal = {
+        enable = true;
+        extraPortals = with pkgs; [
+          xdg-desktop-portal-gtk
+        ];
+      };
 
       services.flatpak = {
         enable = true;
