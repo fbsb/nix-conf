@@ -40,8 +40,8 @@ in
     chaos.all._.hosts
     chaos.hardware._.framework-13-amd-ai-300
     chaos.system._.keymap._.en-us-intl
-    # chaos.desktop._.gnome
-    chaos.desktop._.cosmic
+    chaos.desktop._.gnome
+    # chaos.desktop._.cosmic
   ];
 
   den.aspects.fbsb.includes = [
