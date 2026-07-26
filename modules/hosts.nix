@@ -42,6 +42,7 @@ in
     chaos.system._.keymap._.en-us-intl
     chaos.desktop._.gnome
     # chaos.desktop._.cosmic
+    # chaos.desktop._.dms
   ];
 
   den.aspects.fbsb.includes = [
