@@ -3,9 +3,9 @@
   ...
 }:
 {
-  chaos.all._.users.includes = [ chaos.apps._.vscode ];
+  chaos.all.users.includes = [ chaos.apps.vscode ];
 
-  chaos.apps._.vscode = {
+  chaos.apps.vscode = {
     homeManager =
       {
         pkgs,

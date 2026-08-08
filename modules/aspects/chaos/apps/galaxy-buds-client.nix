@@ -3,9 +3,9 @@
   ...
 }:
 {
-  chaos.all._.hosts.includes = [ chaos.apps._.galaxy-buds-client ];
+  chaos.all.hosts.includes = [ chaos.apps.galaxy-buds-client ];
 
-  chaos.apps._.galaxy-buds-client = {
+  chaos.apps.galaxy-buds-client = {
     nixos =
       {
         pkgs,

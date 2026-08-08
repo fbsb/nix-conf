@@ -4,9 +4,9 @@
   ...
 }:
 {
-  chaos.all._.hosts.includes = [ chaos.system._.utils ];
+  chaos.all.hosts.includes = [ chaos.system.utils ];
 
-  chaos.system._.utils = {
+  chaos.system.utils = {
     nixos =
       { pkgs, ... }:
       {

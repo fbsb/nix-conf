@@ -3,10 +3,10 @@
   ...
 }:
 {
-  chaos.hardware._.laptop = {
+  chaos.hardware.laptop = {
     includes = [
-      chaos.system._.power
-      chaos.hardware._.bluetooth
+      chaos.system.power
+      chaos.hardware.bluetooth
     ];
     nixos = {
       services.logind.settings.Login = {

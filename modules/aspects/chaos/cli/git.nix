@@ -1,8 +1,8 @@
 { chaos, ... }:
 {
-  chaos.all._.users.includes = [ chaos.cli._.git ];
+  chaos.all.users.includes = [ chaos.cli.git ];
 
-  chaos.cli._.git =
+  chaos.cli.git =
     {
       user,
       ...

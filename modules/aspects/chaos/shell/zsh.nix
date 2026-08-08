@@ -4,16 +4,16 @@
   ...
 }:
 {
-  chaos.all._.users.includes = [ chaos.shell._.zsh._.default ];
+  chaos.all.users.includes = [ chaos.shell.zsh.default ];
 
-  chaos.shell._.zsh._.default = {
+  chaos.shell.zsh.default = {
     includes = [
-      (den._.user-shell "zsh")
-      chaos.shell._.zsh
+      (den.batteries.user-shell "zsh")
+      chaos.shell.zsh
     ];
   };
 
-  chaos.shell._.zsh = {
+  chaos.shell.zsh = {
     homeManager =
       {
         config,

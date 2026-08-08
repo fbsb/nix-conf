@@ -1,14 +1,14 @@
 { den, ... }:
 {
-  chaos.all._.hosts = {
+  chaos.all.hosts = {
     includes = [
-      den._.hostname
+      den.batteries.hostname
     ];
   };
 
-  chaos.all._.users = {
+  chaos.all.users = {
     includes = [
-      den._.define-user
+      den.batteries.define-user
     ];
   };
 }

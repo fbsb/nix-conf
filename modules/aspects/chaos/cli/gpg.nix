@@ -53,12 +53,12 @@ let
     };
 in
 {
-  chaos.all._.users.includes = [
-    chaos.cli._.gpg
-    chaos.cli._.gpg-keys
+  chaos.all.users.includes = [
+    chaos.cli.gpg
+    chaos.cli.gpg-keys
   ];
 
-  chaos.cli._.gpg = {
+  chaos.cli.gpg = {
     homeManager =
       {
         pkgs,
@@ -112,7 +112,7 @@ in
       };
   };
 
-  chaos.cli._.gpg-keys = {
+  chaos.cli.gpg-keys = {
     homeManager =
       { pkgs, user, ... }:
       let

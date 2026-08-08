@@ -4,15 +4,15 @@
   ...
 }:
 {
-  chaos.hardware._.framework-13-amd-ai-300 = {
+  chaos.hardware.framework-13-amd-ai-300 = {
     includes = [
-      chaos.hardware._.laptop
-      chaos.hardware._.amd
-      chaos.hardware._.fingerprint
-      chaos.hardware._.sensors
-      chaos.hardware._.wifi
-      chaos.hardware._.framework._.wifi-quirks
-      chaos.hardware._.fan-control
+      chaos.hardware.laptop
+      chaos.hardware.amd
+      chaos.hardware.fingerprint
+      chaos.hardware.sensors
+      chaos.hardware.wifi
+      chaos.hardware.framework.wifi-quirks
+      chaos.hardware.fan-control
     ];
     nixos = {
       imports = [
@@ -21,7 +21,7 @@
     };
   };
 
-  chaos.hardware._.framework._.wifi-quirks = {
+  chaos.hardware.framework.wifi-quirks = {
     nixos = {
       networking = {
         networkmanager.wifi = {

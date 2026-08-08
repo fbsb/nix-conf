@@ -61,9 +61,9 @@
     };
   };
 
-  chaos.all._.hosts.includes = [ chaos.system._.disko ];
+  chaos.all.hosts.includes = [ chaos.system.disko ];
 
-  chaos.system._.disko =
+  chaos.system.disko =
     { host, ... }:
     {
       nixos = {

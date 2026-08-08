@@ -1,9 +1,9 @@
 { chaos, ... }:
 {
-  chaos.all._.hosts.includes = [ chaos.system._.ssh ];
-  chaos.all._.users.includes = [ chaos.system._.ssh-auth ];
+  chaos.all.hosts.includes = [ chaos.system.ssh ];
+  chaos.all.users.includes = [ chaos.system.ssh-auth ];
 
-  chaos.system._.ssh = {
+  chaos.system.ssh = {
     nixos = {
       services.openssh = {
         enable = true;
@@ -18,7 +18,7 @@
     };
   };
 
-  chaos.system._.ssh-auth = {
+  chaos.system.ssh-auth = {
     nixos =
       { user, ... }:
       {

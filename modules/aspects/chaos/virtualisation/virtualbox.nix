@@ -1,5 +1,5 @@
 {
-  chaos.virtualisation._.virtualbox =
+  chaos.virtualisation.virtualbox =
     {
       user,
       ...

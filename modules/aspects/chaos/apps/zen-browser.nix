@@ -3,9 +3,9 @@
   ...
 }:
 {
-  chaos.all._.hosts.includes = [ chaos.apps._.zen-browser ];
+  chaos.all.hosts.includes = [ chaos.apps.zen-browser ];
 
-  chaos.apps._.zen-browser = {
+  chaos.apps.zen-browser = {
     nixos = {
       services.flatpak = {
         packages = [

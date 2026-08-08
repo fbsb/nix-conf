@@ -3,9 +3,9 @@
   ...
 }:
 {
-  chaos.all._.users.includes = [ chaos.apps._.ghostty ];
+  chaos.all.users.includes = [ chaos.apps.ghostty ];
 
-  chaos.apps._.ghostty = {
+  chaos.apps.ghostty = {
     homeManager = {
       programs.ghostty = {
         enable = true;

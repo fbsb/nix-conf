@@ -1,8 +1,8 @@
 { chaos, ... }:
 {
-  chaos.all._.hosts.includes = [ chaos.system._.power ];
+  chaos.all.hosts.includes = [ chaos.system.power ];
 
-  chaos.system._.power = {
+  chaos.system.power = {
     nixos = {
       powerManagement.enable = true;
       systemd.sleep.settings.Sleep = {

@@ -1,5 +1,5 @@
 {
-  chaos.hardware._.bluetooth = {
+  chaos.hardware.bluetooth = {
     nixos = {
 
       hardware.bluetooth.enable = true;

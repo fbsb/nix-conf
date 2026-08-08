@@ -1,6 +1,6 @@
 { lib, ... }:
 {
-  chaos.desktop._.cosmic._.to-users =
+  chaos.desktop.cosmic.to-users =
     let
       # RON-format COSMIC config files (see ~/.config/cosmic), pinned by hand.
       # Only stable, user-chosen settings are declared here: panel/dock
@@ -441,7 +441,7 @@
       };
     };
 
-  chaos.desktop._.cosmic = {
+  chaos.desktop.cosmic = {
     nixos =
       {
         pkgs,

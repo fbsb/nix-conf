@@ -16,9 +16,9 @@ in
       packages.src = mkSrc pkgs;
     };
 
-  chaos.all._.users.includes = [ chaos.dev._.src ];
+  chaos.all.users.includes = [ chaos.dev.src ];
 
-  chaos.dev._.src = {
+  chaos.dev.src = {
     homeManager =
       {
         pkgs,

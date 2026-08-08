@@ -10,9 +10,9 @@
     };
   };
 
-  chaos.all._.hosts.includes = [ chaos.system._.flatpak ];
+  chaos.all.hosts.includes = [ chaos.system.flatpak ];
 
-  chaos.system._.flatpak = {
+  chaos.system.flatpak = {
     nixos = { pkgs, ... }: {
       imports = [
         inputs.nix-flatpak.nixosModules.nix-flatpak

@@ -1,9 +1,9 @@
 { chaos, ... }:
 {
-  chaos.all._.hosts.includes = [ chaos.system._.unfree ];
-  chaos.all._.users.includes = [ chaos.system._.unfree ];
+  chaos.all.hosts.includes = [ chaos.system.unfree ];
+  chaos.all.users.includes = [ chaos.system.unfree ];
 
-  chaos.system._.unfree = {
+  chaos.system.unfree = {
     homeManager = {
       nixpkgs.config.allowUnfree = true;
     };

@@ -1,7 +1,7 @@
 { chaos, ... }:
 {
-  chaos.all._.users.includes = [ chaos.system._.users ];
-  chaos.system._.users =
+  chaos.all.users.includes = [ chaos.system.users ];
+  chaos.system.users =
     {
       user,
       ...

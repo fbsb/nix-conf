@@ -5,7 +5,7 @@
 }:
 {
 
-  chaos.all._.users.includes = [ chaos.build-vm ];
+  chaos.all.users.includes = [ chaos.build-vm ];
 
   chaos.build-vm =
     { user, ... }:

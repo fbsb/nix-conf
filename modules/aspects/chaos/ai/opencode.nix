@@ -1,7 +1,7 @@
 { chaos, ... }:
 {
-  chaos.all._.users.includes = [ chaos.ai._.opencode ];
-  chaos.ai._.opencode = {
+  chaos.all.users.includes = [ chaos.ai.opencode ];
+  chaos.ai.opencode = {
     homeManager = {
       programs.opencode = {
         enable = true;

@@ -30,21 +30,21 @@ in
   };
 
   den.aspects.tars.includes = [
-    chaos.all._.hosts
-    chaos.hardware._.workstation
-    chaos.system._.keymap._.colemak
-    chaos.desktop._.gnome
+    chaos.all.hosts
+    chaos.hardware.workstation
+    chaos.system.keymap.colemak
+    chaos.desktop.gnome
   ];
 
   den.aspects.case.includes = [
-    chaos.all._.hosts
-    chaos.hardware._.framework-13-amd-ai-300
-    chaos.system._.keymap._.en-us-intl
+    chaos.all.hosts
+    chaos.hardware.framework-13-amd-ai-300
+    chaos.system.keymap.en-us-intl
     chaos.desktop.kde
   ];
 
   den.aspects.fbsb.includes = [
-    chaos.all._.users
-    den._.primary-user
+    chaos.all.users
+    den.batteries.primary-user
   ];
 }

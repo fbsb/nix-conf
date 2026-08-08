@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  chaos.hardware._.fan-control = {
+  chaos.hardware.fan-control = {
     gnome-extensions = [ "framework-fan-control" ];
 
     nixos = {

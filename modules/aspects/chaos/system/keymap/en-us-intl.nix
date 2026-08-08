@@ -1,5 +1,5 @@
 {
-  chaos.system._.keymap._.en-us-intl = {
+  chaos.system.keymap.en-us-intl = {
     nixos = {
       services.xserver.xkb = {
         layout = "us,us";

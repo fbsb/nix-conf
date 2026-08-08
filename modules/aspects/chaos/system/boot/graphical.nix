@@ -1,8 +1,8 @@
 { chaos, ... }:
 {
-  chaos.all._.hosts.includes = [ chaos.system._.boot._.graphical ];
+  chaos.all.hosts.includes = [ chaos.system.boot.graphical ];
 
-  chaos.system._.boot._.graphical = {
+  chaos.system.boot.graphical = {
     nixos =
       {
         pkgs,

@@ -24,9 +24,9 @@
     };
   };
 
-  chaos.all._.hosts.includes = [ chaos.system._.locale ];
+  chaos.all.hosts.includes = [ chaos.system.locale ];
 
-  chaos.system._.locale =
+  chaos.system.locale =
     { host, ... }:
     {
       nixos = {

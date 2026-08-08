@@ -1,6 +1,6 @@
 { lib, ... }:
 {
-  chaos.hardware._.nvidia = {
+  chaos.hardware.nvidia = {
     nixos =
       {
         pkgs,

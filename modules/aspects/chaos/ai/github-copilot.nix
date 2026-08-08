@@ -1,8 +1,8 @@
 { chaos, ... }:
 {
-  chaos.all._.users.includes = [ chaos.ai._.github-copilot ];
+  chaos.all.users.includes = [ chaos.ai.github-copilot ];
 
-  chaos.ai._.github-copilot = {
+  chaos.ai.github-copilot = {
     homeManager = {
       programs.github-copilot-cli = {
         enable = true;

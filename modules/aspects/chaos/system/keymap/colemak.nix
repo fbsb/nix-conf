@@ -1,5 +1,5 @@
 {
-  chaos.system._.keymap._.colemak = {
+  chaos.system.keymap.colemak = {
     nixos = {
       services.xserver.xkb = {
         layout = "us,us";

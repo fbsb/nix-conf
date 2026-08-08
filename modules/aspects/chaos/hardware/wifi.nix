@@ -1,6 +1,6 @@
 { lib, ... }:
 {
-  chaos.hardware._.wifi = {
+  chaos.hardware.wifi = {
     nixos = {
       hardware.enableAllFirmware = lib.mkDefault true;
 

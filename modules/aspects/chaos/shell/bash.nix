@@ -1,8 +1,8 @@
 { chaos, ... }:
 {
-  chaos.all._.users.includes = [ chaos.shell._.bash ];
+  chaos.all.users.includes = [ chaos.shell.bash ];
 
-  chaos.shell._.bash = {
+  chaos.shell.bash = {
     homeManager = {
       programs.bash = {
         enable = true;

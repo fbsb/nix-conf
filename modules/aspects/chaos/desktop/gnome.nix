@@ -4,9 +4,9 @@
   den.quirks.gnome-extensions.description = "GNOME shell extensions contributed by aspects";
 
   # TODO: remove when all systems have migrated to new aspect
-  chaos.gnome.includes = [ chaos.desktop._.gnome ];
+  chaos.gnome.includes = [ chaos.desktop.gnome ];
 
-  chaos.desktop._.gnome.nixos =
+  chaos.desktop.gnome.nixos =
     {
       pkgs,
       gnome-extensions,

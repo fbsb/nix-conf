@@ -4,15 +4,15 @@
   ...
 }:
 {
-  chaos.hardware._.amd = {
+  chaos.hardware.amd = {
     includes = [
-      chaos.hardware._.firmware
-      chaos.hardware._.amd._.cpu
-      chaos.hardware._.amd._.gpu
+      chaos.hardware.firmware
+      chaos.hardware.amd.cpu
+      chaos.hardware.amd.gpu
     ];
   };
 
-  chaos.hardware._.amd._.cpu = {
+  chaos.hardware.amd.cpu = {
     nixos = {
       imports = [
         inputs.nixos-hardware.nixosModules.common-cpu-amd
@@ -26,7 +26,7 @@
     };
   };
 
-  chaos.hardware._.amd._.gpu = {
+  chaos.hardware.amd.gpu = {
     nixos =
       {
         pkgs,

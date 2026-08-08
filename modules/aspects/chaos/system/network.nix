@@ -1,8 +1,8 @@
 { chaos, ... }:
 {
-  chaos.all._.hosts.includes = [ chaos.system._.network ];
+  chaos.all.hosts.includes = [ chaos.system.network ];
 
-  chaos.system._.network = {
+  chaos.system.network = {
     nixos = {
       networking = {
         networkmanager.enable = true;

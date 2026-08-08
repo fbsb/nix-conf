@@ -3,9 +3,9 @@
   ...
 }:
 {
-  chaos.all._.hosts.includes = [ chaos.apps._.junction ];
+  chaos.all.hosts.includes = [ chaos.apps.junction ];
 
-  chaos.apps._.junction = {
+  chaos.apps.junction = {
     nixos =
       let
         junctionApp = "re.sonny.Junction";

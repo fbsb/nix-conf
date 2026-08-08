@@ -1,7 +1,7 @@
 { chaos, ... }:
 {
-  chaos.all._.users.includes = [ chaos.ai._.spec-kit ];
-  chaos.ai._.spec-kit = {
+  chaos.all.users.includes = [ chaos.ai.spec-kit ];
+  chaos.ai.spec-kit = {
     homeManager =
       { pkgs, ... }:
       {

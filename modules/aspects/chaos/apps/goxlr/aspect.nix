@@ -3,9 +3,9 @@
   ...
 }:
 {
-  chaos.all._.users.includes = [ chaos.apps._.goxlr ];
+  chaos.all.users.includes = [ chaos.apps.goxlr ];
 
-  chaos.apps._.goxlr = {
+  chaos.apps.goxlr = {
     nixos = {
       services.goxlr-utility = {
         enable = true;
