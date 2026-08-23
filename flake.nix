@@ -11,6 +11,17 @@
   };
 
   inputs = {
+    chaotic = {
+      url = "github:fbsb/chaotic";
+      inputs = {
+        den.follows = "den";
+        flake-file.follows = "flake-file";
+        flake-parts.follows = "flake-parts";
+        home-manager.follows = "home-manager";
+        import-tree.follows = "import-tree";
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
     den.url = "github:vic/den/latest";
     disko = {
       url = "github:nix-community/disko";

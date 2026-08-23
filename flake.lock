@@ -1,5 +1,40 @@
 {
   "nodes": {
+    "chaotic": {
+      "inputs": {
+        "den": [
+          "den"
+        ],
+        "flake-file": [
+          "flake-file"
+        ],
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "home-manager": [
+          "home-manager"
+        ],
+        "import-tree": [
+          "import-tree"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1787522396,
+        "narHash": "sha256-U8CMNLe9ML1REuFjPI8JXMT7MNRMSR9p7M6usugwyVs=",
+        "owner": "fbsb",
+        "repo": "chaotic",
+        "rev": "a813448ebb5cc6c0d3d4d43835a3c3fba9744483",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fbsb",
+        "repo": "chaotic",
+        "type": "github"
+      }
+    },
     "den": {
       "locked": {
         "lastModified": 1781621963,
@@ -159,6 +194,7 @@
     },
     "root": {
       "inputs": {
+        "chaotic": "chaotic",
         "den": "den",
         "disko": "disko",
         "flake-file": "flake-file",

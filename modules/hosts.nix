@@ -1,6 +1,7 @@
 {
   den,
   chaos,
+  chaotic,
   ...
 }:
 let
@@ -44,7 +45,18 @@ in
   ];
 
   den.aspects.fbsb.includes = [
-    chaos.all.users
     den.batteries.primary-user
+    (den.batteries.user-shell "zsh")
+
+    chaos.all.users
+
+    chaotic.zsh
+    chaotic.bash
+    chaotic.starship
+    chaotic.git
+    chaotic.gpg
+    chaotic.src
+    chaotic.ghostty
+    chaotic.nix-dev
   ];
 }
