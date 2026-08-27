@@ -58,7 +58,9 @@ in
     chaotic.git
     chaotic.gpg
     chaotic.src
-    chaotic.ghostty
     chaotic.nix-dev
+    chaotic.kubetools
+
+    chaotic.ghostty
   ];
 }
