@@ -22,11 +22,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787522396,
-        "narHash": "sha256-U8CMNLe9ML1REuFjPI8JXMT7MNRMSR9p7M6usugwyVs=",
+        "lastModified": 1787855244,
+        "narHash": "sha256-3TQ095xg53zkPbyQnk6qxl3LKqc9W0SIn+cFEPtUtWM=",
         "owner": "fbsb",
         "repo": "chaotic",
-        "rev": "a813448ebb5cc6c0d3d4d43835a3c3fba9744483",
+        "rev": "7f45713f72ba95ec8ef9fb8b450697a787b52db8",
         "type": "github"
       },
       "original": {

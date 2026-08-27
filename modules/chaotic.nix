@@ -1,6 +1,8 @@
 { inputs, ... }:
 {
   imports = [
+    inputs.chaotic.modules.flake.nh
+
     (inputs.den.namespace "chaotic" [ inputs.chaotic ])
   ];
 

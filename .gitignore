@@ -2,3 +2,4 @@
 result
 *-efi-vars.fd
 .keep-vm
+.overrides
