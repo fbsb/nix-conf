@@ -62,5 +62,6 @@ in
     chaotic.kubetools
 
     chaotic.ghostty
+    chaotic._1password
   ];
 }
