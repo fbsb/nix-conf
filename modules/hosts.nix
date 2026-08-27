@@ -30,6 +30,8 @@ in
     users = users;
   };
 
+  den.homes.x86_64-linux.fbsb = { };
+
   den.aspects.tars.includes = [
     chaos.all.hosts
     chaos.hardware.workstation
