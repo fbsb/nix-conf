@@ -22,11 +22,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787855244,
-        "narHash": "sha256-3TQ095xg53zkPbyQnk6qxl3LKqc9W0SIn+cFEPtUtWM=",
+        "lastModified": 1787933676,
+        "narHash": "sha256-Q61TqYN9EwaEp1jFzdI1lYWtI8WZ12UqZwcgnIk4QQs=",
         "owner": "fbsb",
         "repo": "chaotic",
-        "rev": "7f45713f72ba95ec8ef9fb8b450697a787b52db8",
+        "rev": "364b64047541f7ae7e01a4cba029a68a969c7169",
         "type": "github"
       },
       "original": {
@@ -113,11 +113,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785264202,
-        "narHash": "sha256-syMOL7AfAu4Q/aJcCrMuqzudoOD3aunCa9EHgxP0TpY=",
+        "lastModified": 1787927853,
+        "narHash": "sha256-CLkxxYiziHgYVb7hPPo3jyARz7DmMpZNHupG0w78xbQ=",
         "owner": "fbsb",
         "repo": "home-manager",
-        "rev": "732eacaacd89000f3fa1282c9836ce461af6117b",
+        "rev": "3fe676b6d777933b19c34e4a3fac21c76f8f6a04",
         "type": "github"
       },
       "original": {
