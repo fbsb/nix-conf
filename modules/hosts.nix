@@ -29,8 +29,8 @@ in
     disko.swapSize = "32G";
     users = users;
   };
-
-  den.homes.x86_64-linux.fbsb = { };
+  den.homes.x86_64-linux."fbsb@case" = { };
+  den.homes.x86_64-linux."fbsb@tars" = { };
 
   den.aspects.tars.includes = [
     chaos.all.hosts
