@@ -60,6 +60,9 @@ in
     chaotic.src
     chaotic.nix-dev
     chaotic.kubetools
+    chaotic.helm
+    chaotic.direnv
+    chaotic.watch
 
     chaotic.ghostty
     chaotic._1password
