@@ -23,6 +23,8 @@ let
 
         chaos.all.users
 
+        chaos.desktop.gnome
+
         chaotic.zsh
         chaotic.bash
         chaotic.starship
