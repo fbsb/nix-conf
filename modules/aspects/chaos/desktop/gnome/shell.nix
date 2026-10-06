@@ -6,6 +6,7 @@
     blur-my-shell
     clipboard-indicator
     dash-to-dock
+    hibernate-power-menu
     tiling-shell
     system-monitor-next
   ];
