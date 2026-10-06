@@ -34,6 +34,7 @@
           yq-go
           psmisc
           tio
+          ripgrep
         ];
       };
   };
