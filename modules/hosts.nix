@@ -63,7 +63,7 @@ let
         chaos.all.hosts
         chaos.hardware.framework-13-amd-ai-300
         chaos.system.keymap.en-us-intl
-        chaos.desktop.kde
+        chaos.desktop.gnome
       ];
     };
   };
