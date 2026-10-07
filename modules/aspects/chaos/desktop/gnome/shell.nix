@@ -15,11 +15,23 @@
     gtk = {
       enable = true;
       colorScheme = "dark";
+      font = {
+        name = "Adwaita Sans";
+        size = 11;
+      };
+      cursorTheme = {
+        name = "Adwaita";
+        size = 24;
+      };
     };
     dconf.settings = {
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
+        cursor-size = 24;
+        cursor-theme = "Adwaita";
         enable-hot-corners = false;
+        font-name = "Adwaita Sans 11";
+        monospace-font-name = "Adwaita Mono 11";
         show-battery-percentage = true;
         clock-show-weekday = true;
         clock-show-date = true;
