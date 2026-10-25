@@ -4,8 +4,8 @@
   ...
 }:
 {
-  flake-file.inputs.flake-file.url = lib.mkForce "github:vic/flake-file";
-  flake-file.inputs.den.url = lib.mkForce "github:vic/den/latest";
+  flake-file.inputs.flake-file.url = lib.mkForce "github:denful/flake-file";
+  flake-file.inputs.den.url = lib.mkForce "github:denful/den/latest";
 
   imports = [
     (inputs.den.namespace "chaos" true)
