@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "configurations": [
+    {
+      "id": "profile_1792876070662_la39al1",
+      "name": "docked",
+      "outputs": {
+        "Samsung Electric Company LS49AG95 HNTR900271": {
+          "mode": "5120x1440@119.999",
+          "position": {
+            "x": 0,
+            "y": 1080
+          },
+          "scale": 1,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "niri": {}
+        },
+        "BOE NE135A1M-NY1 Unknown": {
+          "mode": "2880x1920@120.000",
+          "position": {
+            "x": 1840,
+            "y": 2520
+          },
+          "scale": 1.5,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "niri": {}
+        },
+        "Acer Technologies S271HL LUW0D0058536": {
+          "mode": "1920x1080@60.000",
+          "position": {
+            "x": 1600,
+            "y": 0
+          },
+          "scale": 1,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "niri": {}
+        }
+      }
+    },
+    {
+      "id": "profile_1792931325884_9wl1mcx",
+      "name": "undocked",
+      "outputs": {
+        "BOE NE135A1M-NY1 Unknown": {
+          "mode": "2880x1920@120.000",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": 1.75,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "niri": {}
+        }
+      }
+    }
+  ]
+}

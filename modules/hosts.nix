@@ -24,6 +24,7 @@ let
         chaos.all.users
 
         chaos.desktop.gnome
+        chaos.desktop.dms.config
 
         chaotic.zsh
         chaotic.bash
@@ -53,6 +54,7 @@ let
         chaos.hardware.workstation
         chaos.system.keymap.colemak
         chaos.desktop.gnome
+        chaos.desktop.dms
       ];
     };
     case = {
@@ -64,6 +66,7 @@ let
         chaos.hardware.framework-13-amd-ai-300
         chaos.system.keymap.en-us-intl
         chaos.desktop.gnome
+        chaos.desktop.dms
       ];
     };
   };
