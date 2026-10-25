@@ -1,4 +1,4 @@
-{
+{ lib, ... }: {
   chaos.desktop.dms = {
     nixos = {
       programs.niri.enable = true;
@@ -25,15 +25,20 @@
   chaos.desktop.dms.config = {
     homeManager = {
       xdg.configFile = {
-        "niri" = {
-          source = ./dms/niri;
+        "niri/config.kdl" = {
+          source = ./dms/niri/config.kdl;
+        };
+        "niri/dms-static" = {
+          source = ./dms/niri/dms-static;
           recursive = true;
         };
-        "DankMaterialShell" = {
-          source = ./dms/DankMaterialShell;
-          recursive = true;
-        };
-      };
+      }
+      // lib.mapAttrs' (
+        name: _:
+        lib.nameValuePair "DankMaterialShell/${name}" {
+          source = ./dms/DankMaterialShell/${name};
+        }
+      ) (lib.filterAttrs (_: type: type == "regular") (builtins.readDir ./dms/DankMaterialShell));
     };
   };
 }
