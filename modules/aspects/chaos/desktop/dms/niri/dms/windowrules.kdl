@@ -1,0 +1,15 @@
+// DMS Window Rules - Managed by DankMaterialShell
+// Do not edit manually - changes may be overwritten
+
+// @id=wr_1785274447926145791 @name=re.sonny.Junction
+window-rule {
+    match app-id="^re.sonny.Junction$" is-floating=false
+    open-floating true
+    open-focused true
+}
+
+// @id=dms-floating-windows @name=DMS Floating Windows
+window-rule {
+    match app-id="^com.danklinux.dms$"
+    open-floating true
+}
