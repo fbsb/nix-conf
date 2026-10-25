@@ -106,6 +106,32 @@
         "type": "github"
       }
     },
+    "hm-mutable": {
+      "inputs": {
+        "home-manager": [
+          "home-manager"
+        ],
+        "home-manager-release": [
+          "home-manager"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792937832,
+        "narHash": "sha256-1/14kFy2Mu/Q6sWmpdj2aN6T0u5BMfoYHNe4KYTnPtc=",
+        "owner": "fbsb",
+        "repo": "hm-mutable",
+        "rev": "c4537a53c02d35765071094e163612ae6435510c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fbsb",
+        "repo": "hm-mutable",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -113,16 +139,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1787927853,
-        "narHash": "sha256-CLkxxYiziHgYVb7hPPo3jyARz7DmMpZNHupG0w78xbQ=",
-        "owner": "fbsb",
+        "lastModified": 1792896866,
+        "narHash": "sha256-/0tELNnhdSnP+bHSdWiEe6KpfSwi6WrTnT9cm/jNkjA=",
+        "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "3fe676b6d777933b19c34e4a3fac21c76f8f6a04",
+        "rev": "c216bf5a1f173b0481bd5c8c489ebe5595ecc68c",
         "type": "github"
       },
       "original": {
-        "owner": "fbsb",
-        "ref": "mutable",
+        "owner": "nix-community",
         "repo": "home-manager",
         "type": "github"
       }
@@ -199,6 +224,7 @@
         "disko": "disko",
         "flake-file": "flake-file",
         "flake-parts": "flake-parts",
+        "hm-mutable": "hm-mutable",
         "home-manager": "home-manager",
         "import-tree": "import-tree",
         "nix-flatpak": "nix-flatpak",
