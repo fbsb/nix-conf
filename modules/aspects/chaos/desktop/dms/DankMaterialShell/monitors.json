@@ -60,6 +60,36 @@
           "niri": {}
         }
       }
+    },
+    {
+      "id": "profile_1792955823027_xgoovig",
+      "name": "desktop",
+      "outputs": {
+        "Acer Technologies S271HL LUW0D0058536": {
+          "mode": "1920x1080@60.000",
+          "position": {
+            "x": 907,
+            "y": 0
+          },
+          "scale": 1,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "niri": {}
+        },
+        "Samsung Electric Company LS49AG95 HNTR900271": {
+          "mode": "5120x1440@119.988",
+          "position": {
+            "x": 0,
+            "y": 1080
+          },
+          "scale": 1,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "niri": {}
+        }
+      }
     }
   ]
 }
