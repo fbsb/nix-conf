@@ -16,7 +16,6 @@
           enable = true;
           profiles.default = {
             extensions = with pkgs.vscode-extensions; [
-              github.copilot
               github.copilot-chat
               # TODO: enable this when we have podman configured
               # ms-vscode-remote.remote-containers
