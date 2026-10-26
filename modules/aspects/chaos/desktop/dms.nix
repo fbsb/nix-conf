@@ -12,6 +12,11 @@
         };
       };
 
+      systemd.user.services.dms.environment = {
+        QT_QPA_PLATFORMTHEME = "generic";
+        QT_QPA_PLATFORMTHEME_QT6 = "generic";
+      };
+
       security.polkit.enable = true;
       services.gnome.gnome-keyring.enable = true;
       security.pam.services.gdm-password.enableGnomeKeyring = true;
