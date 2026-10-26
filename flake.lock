@@ -111,19 +111,16 @@
         "home-manager": [
           "home-manager"
         ],
-        "home-manager-release": [
-          "home-manager"
-        ],
         "nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1792937832,
-        "narHash": "sha256-1/14kFy2Mu/Q6sWmpdj2aN6T0u5BMfoYHNe4KYTnPtc=",
+        "lastModified": 1793048292,
+        "narHash": "sha256-3POs0kFOFZUgfo7n4I+zfu6mYYklm7m0Mgx+ubnAauw=",
         "owner": "fbsb",
         "repo": "hm-mutable",
-        "rev": "c4537a53c02d35765071094e163612ae6435510c",
+        "rev": "0d079cb54e9c8f87e0a5544ae570df3e876c15f7",
         "type": "github"
       },
       "original": {

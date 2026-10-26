@@ -10,7 +10,6 @@
       url = "github:fbsb/hm-mutable";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
-      inputs.home-manager-release.follows = "home-manager";
     };
   };
 
