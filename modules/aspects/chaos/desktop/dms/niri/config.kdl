@@ -50,7 +50,7 @@ input {
 layout {
 
     always-center-single-column
-    center-focused-column "on-overflow"
+    center-focused-column "never"
     background-color "transparent"
     preset-column-widths {
         proportion 0.25
@@ -68,7 +68,7 @@ layout {
 output "Samsung Electric Company LS49AG95 HNTR900271" {
     focus-at-startup
     layout {
-        default-column-width { proportion 0.25; }
+        default-column-width { proportion 0.5; }
     }
 }
 
