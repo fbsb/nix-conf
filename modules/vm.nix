@@ -13,7 +13,7 @@
     {
       packages =
         inputs.self.nixosConfigurations
-        |> lib.filterAttrs (_: nixos: nixos.pkgs.system == system)
+        |> lib.filterAttrs (_: nixos: nixos.pkgs.stdenv.hostPlatform.system == system)
         |> lib.mapAttrs' (
           name: nixos:
           lib.nameValuePair "${name}-vm" (
