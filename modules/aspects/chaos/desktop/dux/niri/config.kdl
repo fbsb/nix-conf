@@ -54,11 +54,13 @@ layout {
     background-color "transparent"
     preset-column-widths {
         proportion 0.25
+        proportion 0.33
         proportion 0.5
+        proportion 0.66
         proportion 0.75
-        proportion 0.98
+        proportion 1.0
     }
-    default-column-width { proportion 0.98; }
+    default-column-width { proportion 1.0; }
     default-column-display "tabbed"
     tab-indicator {
         hide-when-single-tab
@@ -156,7 +158,7 @@ window-rule {
     match app-id=r#"^gnome-calculator$"#
     match app-id=r#"^galculator$"#
     match app-id=r#"^blueman-manager$"#
-    match app-id=r#"^org\.gnome\.Nautilus$"#
+    // match app-id=r#"^org\.gnome\.Nautilus$"#
     match app-id=r#"^xdg-desktop-portal$"#
     open-floating true
 }
@@ -198,6 +200,7 @@ binds {
     Mod+Down hotkey-overlay-title="Focus Down" { focus-window-or-workspace-down; }
     Mod+Left hotkey-overlay-title="Focus Left" { focus-column-left; }
     Mod+Right hotkey-overlay-title="Focus Right" { focus-column-right; }
+    Mod+D hotkey-overlay-title="Switch Floating/Tiling Focus" { switch-focus-between-floating-and-tiling; }
 
     // focus monitor
     Mod+Ctrl+Up hotkey-overlay-title="Focus Monitor Up" { focus-monitor-up; }
@@ -226,18 +229,25 @@ binds {
     Mod+T hotkey-overlay-title="Toggle Tabbed" { toggle-column-tabbed-display; }
     Mod+Shift+F hotkey-overlay-title="Toggle Floating" { toggle-window-floating; }
     Mod+C hotkey-overlay-title="Center Column" { center-column; }
-    Mod+F hotkey-overlay-title="Fullscreen" { fullscreen-window; }
-    Mod+M hotkey-overlay-title="Maximize Column" { maximize-column; }
-    Mod+D hotkey-overlay-title="Switch Floating/Tiling Focus" { switch-focus-between-floating-and-tiling; }
 
-    Mod+Shift+Slash hotkey-overlay-title="Show Hotkey Overlay" { show-hotkey-overlay; }
-    Mod+Return hotkey-overlay-title="Ghostty" { spawn "ghostty"; }
+    // screenshots
     Mod+S hotkey-overlay-title="Screenshot (Interactive)" { screenshot; }
     Mod+Shift+S hotkey-overlay-title="Screenshot Window" { screenshot-window; }
+    Mod+Shift+Alt+S hotkey-overlay-title="Screenshot Screen" { screenshot-screen; }
+
+    // Resizing
+    Mod+F hotkey-overlay-title="Fullscreen" { fullscreen-window; }
+    Mod+M hotkey-overlay-title="Maximize Column" { maximize-column; }
     Mod+W hotkey-overlay-title="Cycle Column Width" { switch-preset-column-width; }
+    Mod+Equal hotkey-overlay-title="Next Column Width" { switch-preset-column-width; }
+    Mod+Minus hotkey-overlay-title="Previous Column Width" { switch-preset-column-width-back; }
+    Mod+Shift+Equal hotkey-overlay-title="Increase Column Width by 100" { set-column-width "+100"; }
+    Mod+Shift+Minus hotkey-overlay-title="Decrease Column Width by 100" { set-column-width "-100"; }
+    Mod+Shift+Alt+Equal hotkey-overlay-title="Increase Column Width by 500" { set-column-width "+500"; }
+    Mod+Shift+Alt+Minus hotkey-overlay-title="Decrease Column Width by 500" { set-column-width "-500"; }
 
     Mod+Q allow-inhibiting=false hotkey-overlay-title="Close Window" { close-window; }
-    Mod+Escape allow-inhibiting=false hotkey-overlay-title="Toggle Shortcuts Inhibit" { toggle-keyboard-shortcuts-inhibit; }
+    // Mod+Escape allow-inhibiting=false hotkey-overlay-title="Toggle Shortcuts Inhibit" { toggle-keyboard-shortcuts-inhibit; }
 
     // media keys
     XF86AudioLowerVolume hotkey-overlay-title="Volume Down (5%)" { spawn "dms" "ipc" "call" "audio" "decrement" "5"; }
@@ -252,8 +262,10 @@ binds {
     Mod+Comma hotkey-overlay-title="Settings: Focus or Toggle" { spawn "dms" "ipc" "call" "settings" "focusOrToggle"; }
     Mod+E hotkey-overlay-title="Default File Manager: Open" { spawn "dms" "ipc" "call" "defaultApp" "fileManager"; }
     Mod+N hotkey-overlay-title="Notifications: Toggle" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
-    Mod+L allow-inhibiting=false hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
+    Mod+Escape allow-inhibiting=false hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
     Mod+space hotkey-overlay-title="Default Launcher: Toggle" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
+    Mod+Return hotkey-overlay-title="Ghostty" { spawn "ghostty"; }
+    Mod+Shift+Slash hotkey-overlay-title="Show Hotkey Overlay" { show-hotkey-overlay; }
 }
 
 // Include dms files
