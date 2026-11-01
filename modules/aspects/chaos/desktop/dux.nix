@@ -1,6 +1,6 @@
 { lib, ... }: {
   chaos.desktop.dux = {
-    nixos = {
+    nixos = { pkgs, ... }: {
       programs.niri.enable = true;
 
       programs.dux-shell = {
@@ -37,9 +37,14 @@
       environment.systemPackages = with pkgs; [
         nautilus
       ];
+      security.pam.services.greetd.enableGnomeKeyring = true;
       security.pam.services.greetd.fprintAuth = true;
 
-      services.displayManager.gdm.enable = true;
+      services.displayManager.dux-greeter = {
+        enable = true;
+        compositor.name = "niri";
+      };
+
       services.displayManager.defaultSession = "niri";
     };
   };
