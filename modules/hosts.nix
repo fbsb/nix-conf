@@ -23,7 +23,6 @@ let
 
         chaos.all.users
 
-        chaos.desktop.gnome
         chaos.desktop.dux.config
 
         chaotic.zsh
@@ -53,7 +52,6 @@ let
         chaos.all.hosts
         chaos.hardware.workstation
         chaos.system.keymap.en-us-intl
-        chaos.desktop.gnome
         chaos.desktop.dux
       ];
     };
@@ -65,7 +63,6 @@ let
         chaos.all.hosts
         chaos.hardware.framework-13-amd-ai-300
         chaos.system.keymap.en-us-intl
-        chaos.desktop.gnome
         chaos.desktop.dux
       ];
     };
