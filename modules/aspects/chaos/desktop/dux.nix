@@ -32,7 +32,11 @@
 
       security.polkit.enable = true;
       services.gnome.gnome-keyring.enable = true;
-      security.pam.services.gdm-password.enableGnomeKeyring = true;
+      services.gvfs.enable = true;
+      services.gnome.sushi.enable = true;
+      environment.systemPackages = with pkgs; [
+        nautilus
+      ];
       security.pam.services.greetd.fprintAuth = true;
 
       services.displayManager.gdm.enable = true;
