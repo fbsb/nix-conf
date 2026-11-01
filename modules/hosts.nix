@@ -52,7 +52,7 @@ let
       aspect.includes = [
         chaos.all.hosts
         chaos.hardware.workstation
-        chaos.system.keymap.colemak
+        chaos.system.keymap.en-us-intl
         chaos.desktop.gnome
         chaos.desktop.dux
       ];
