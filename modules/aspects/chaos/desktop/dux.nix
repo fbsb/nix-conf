@@ -25,6 +25,8 @@
         systemd.enable = true;
       };
 
+      services.power-profiles-daemon.enable = true;
+
       systemd.user.services.dms.environment = {
         QT_QPA_PLATFORMTHEME = "generic";
         QT_QPA_PLATFORMTHEME_QT6 = "generic";
