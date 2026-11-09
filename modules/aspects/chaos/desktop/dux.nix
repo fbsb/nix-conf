@@ -37,6 +37,7 @@
       services.gnome.sushi.enable = true;
       environment.systemPackages = with pkgs; [
         nautilus
+        adwaita-icon-theme
       ];
       security.pam.services.greetd.enableGnomeKeyring = true;
       security.pam.services.greetd.fprintAuth = true;
