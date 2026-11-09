@@ -25,8 +25,6 @@
         systemd.enable = true;
       };
 
-      services.power-profiles-daemon.enable = true;
-
       systemd.user.services.dms.environment = {
         QT_QPA_PLATFORMTHEME = "generic";
         QT_QPA_PLATFORMTHEME_QT6 = "generic";
@@ -48,6 +46,9 @@
       };
 
       services.displayManager.defaultSession = "niri";
+
+      services.power-profiles-daemon.enable = true;
+      services.upower.enable = true;
     };
   };
 
