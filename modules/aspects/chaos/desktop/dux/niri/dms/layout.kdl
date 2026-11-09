@@ -3,18 +3,6 @@
 // ! CHANGES WILL BE OVERWRITTEN !
 // ! PLACE YOUR CUSTOM CONFIGURATION ELSEWHERE !
 
-layout {
-    gaps 10
-
-    border {
-        width 2
-    }
-
-    focus-ring {
-        width 2
-    }
-}
-
 window-rule {
     geometry-corner-radius 16
     clip-to-geometry true
